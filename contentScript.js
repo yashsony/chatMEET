@@ -119,7 +119,7 @@ function start_checking_for_messages(){
     setTimeout(function () {
       chrome.storage.sync.set({'lngth': 0, 'chld_lngth': 0},()=>{});
       setInterval( ()=>{check();}, 1000);     
-  }, 1000);
+  }, 400);
 
 }
 

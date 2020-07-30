@@ -144,7 +144,8 @@ function check(){
                       title: name_time,
                       message: message,
                       iconUrl: 'images/48.png',
-                      type: 'basic'
+                      type: 'basic',
+                      silent : true
                     }
                   });
                 
@@ -164,7 +165,8 @@ function check(){
                       title: name_time,
                       message: message,
                       iconUrl: 'images/48.png',
-                      type: 'basic'
+                      type: 'basic',
+                      silent : true
                     }
                   });
 

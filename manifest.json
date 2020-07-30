@@ -1,0 +1,52 @@
+  {
+    "name": "Meet CHAT",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "get desktop notifications of google meet conversation messages ",
+  
+    "icons": {
+        "16": "images/16.png",        
+        "24": "images/24.png",       
+        "32": "images/32.png",
+        "48" : "images/48.png" 
+      },
+
+
+      
+      "page_action": {
+
+        "default_icon": {                  
+          "16": "images/16.png",        
+          "24": "images/24.png",       
+          "32": "images/32.png",
+          "48" : "images/48.png"           
+        },
+        "default_title": "Meet CHAT" ,
+       "default_popup": "popup.html" 
+    },
+
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+      },
+
+
+      "content_scripts": [
+          {
+
+        "matches": ["https://meet.google.com/*"],
+        "js": ["contentScript.js"]
+      }
+    
+    
+    ],
+
+
+    "author" : "yash soni",
+  
+
+
+      "permissions": ["declarativeContent", "activeTab"  , "storage", "tabs","webNavigation", "notifications"]
+
+    
+  }

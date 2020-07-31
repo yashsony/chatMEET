@@ -28,7 +28,7 @@ function element_exists(){
   document.getElementsByClassName("NzPR9b")[0].children[2].addEventListener("click", function(){
     setTimeout( function(){
   
-      document.getElementsByClassName("vvTMTb")[0].children[0].innerHTML += `    <div  id="my_emojis"style=" position: fixed; bottom:70px; right:10px; font-size: 30px; ">
+      document.getElementsByClassName("vvTMTb")[0].children[0].innerHTML += `    <div  id="my_emojis"style=" position: fixed; bottom:70px; right:20px; font-size: 30px; ">
       <div style="text-shadow:    3px 3px 5px 6px #ccc; pointer-events : auto; cursor: pointer; "> 🙂 </div>
       
       <div style="text-shadow:    3px 3px 5px 6px #ccc; pointer-events : auto ; cursor: pointer ;"> 👏</div>

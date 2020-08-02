@@ -3,6 +3,8 @@ chrome.webNavigation.onCompleted.addListener(function(details) {
  
     chrome.pageAction.show(details.tabId);
     var today = new Date();
+    chrome.storage.sync.set({ 'enable_notifications': true }, ()=>{});
+
     
     chrome.storage.sync.set({'expired_time': today.getTime() , 'is_notification': ''}, ()=>{});
    

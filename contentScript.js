@@ -2,11 +2,11 @@
 var stop
    stop =  setInterval(function() {
         if(document.getElementsByClassName("NzPR9b").length > 0){
-console.log("stoppend");
+//console.log("stoppend");
           clearTimeout(stop);      element_exists(); start_checking_for_messages();       
         }
-       else
-console.log("working");     
+      
+//console.log("working");     
     }, 2000);
 
 
@@ -41,6 +41,7 @@ function element_exists(){
   
   
     }, 500);
+
   
   setTimeout(function(){
   
@@ -118,7 +119,16 @@ function element_exists(){
 function start_checking_for_messages(){
     setTimeout(function () {
       chrome.storage.sync.set({'lngth': 0, 'chld_lngth': 0},()=>{});
-      setInterval( ()=>{check();}, 1000);     
+
+      setInterval( function(){
+        chrome.storage.sync.get(['enable_notifications'], function(items){
+          if(items['enable_notifications'] == true){
+            check();
+            console.log("checking for new messages");
+          }
+        });
+      }, 500);     
+
   }, 400);
 
 }

@@ -44,7 +44,10 @@
 
     "author" : "yash soni",
   
-
+    "externally_connectable": {
+      "matches": ["*://*.example.com/*"]
+    },
+    
 
       "permissions": ["declarativeContent", "activeTab"  , "storage", "tabs","webNavigation", "notifications"]
 

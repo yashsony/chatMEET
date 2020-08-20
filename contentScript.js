@@ -10,10 +10,42 @@ var stop
     }, 2000);
 
 
+var stopattandnace = setInterval(function(){
+  if(document.getElementsByClassName("cS7aqe NkoVdd").length > 0){
+    clearTimeout(stopattandnace);
+    startattandance();
+  }
+})
+
+var attandancetimer = 1000*60*10;
 
 
 
- 
+
+
+ function startattandance(){
+    var allstudentpresent = new Set();
+      var foo = setInterval(()=>{
+        attandancetimer-=1000*60;
+        if(attandancetimer < 0){
+          clearTimeout(foo);
+        }
+        setTimeout(()=>{
+
+          let student = document.getElementsByClassName("cS7aqe NkoVdd");
+          for(let i = 0; i < student.length; i++){
+            console.log(student[i].innerHTML);
+            allstudentpresent.add(student[i].innerHTML);
+          }
+  
+        },10000);
+      },1000*60);
+
+      for(let x = 0; x < allstudentpresent.length; x++)
+        console.log(allstudentpresent[i]);
+      
+   
+ }
   
 
 
